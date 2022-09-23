@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import selfie from "/selfie-resize.jpg";
 
 const navigation = [
 	{ name: "About", href: "#", current: true },
@@ -22,11 +23,7 @@ export default function Navbar() {
 								<div className='flex-shrink-0'>
 									{/* Profile Picture */}
 									<div className='flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
-										<img
-											className='h-10 w-10 rounded-full'
-											src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-											alt=''
-										/>
+										<img className='h-14 w-14 rounded-full' src='/selfie.jpg' alt='' />
 									</div>
 									{/* Name */}
 								</div>
@@ -50,7 +47,7 @@ export default function Navbar() {
 											<a
 												key={item.name}
 												href={item.href}
-												className='text-black px-3 py-2 rounded-lg transition ease-in-out duration-200 hover:bg-gray-700 hover:text-white hover:scale-105'
+												className='text-black px-3 py-2 rounded-lg transition ease-in-out duration-200 hover:bg-gray-700 hover:text-white'
 												aria-current={item.current ? "page" : undefined}
 											>
 												{item.name}
@@ -62,10 +59,7 @@ export default function Navbar() {
 							{/* Action */}
 							<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
 								<div className='flex-shrink-0'>
-									<button className='bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'>
-										<span className='sr-only'>View notifications</span>
-										<BellIcon className='h-6 w-6' aria-hidden='true' />
-									</button>
+									<button className='bg-gray-800 px-10 py-2 rounded-lg text-white hover:text-white drop-shadow-2xl'>Contact Me</button>
 								</div>
 							</div>
 						</div>
