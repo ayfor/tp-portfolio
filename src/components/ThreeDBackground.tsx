@@ -20,7 +20,7 @@ const Cube = () => {
 	return (
 		<mesh ref={cube} position={cubePosition}>
 			<boxGeometry args={cubeSize} />
-			<meshStandardMaterial color="#0391BA" />
+			<meshStandardMaterial color='#0391BA' />
 		</mesh>
 	);
 };
@@ -39,7 +39,7 @@ const Sphere = () => {
 	return (
 		<mesh ref={sphere} position={spherePosition}>
 			<sphereGeometry args={sphereSize} />
-			<meshStandardMaterial color="hotpink" />
+			<meshStandardMaterial color='hotpink' />
 		</mesh>
 	);
 };
@@ -61,7 +61,7 @@ const Pyramid = () => {
 	return (
 		<mesh ref={pyramid} position={pyramidPosition}>
 			<coneGeometry args={pyramidSize} />
-			<meshStandardMaterial color="orange" />
+			<meshStandardMaterial color='orange' />
 		</mesh>
 	);
 };
@@ -70,11 +70,11 @@ const ThreeDBackground = (props: any) => {
 	return (
 		<div
 			style={{
-				height: "100vh",
+				height: "80vh",
 				width: "100vw",
 			}}
+			className='flex justify-center items-center'
 		>
-			<Navbar />
 			<Canvas
 				camera={{
 					near: 0.1,

@@ -3,7 +3,12 @@ import Navbar from "../components/Navbar";
 import ThreeDBackground from "../components/ThreeDBackground";
 
 const Home: NextPage = () => {
-	return <ThreeDBackground />;
+	return (
+		<>
+			<Navbar />
+			<ThreeDBackground />;
+		</>
+	);
 };
 
 export default Home;
