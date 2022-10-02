@@ -18,7 +18,7 @@ export default function Navbar() {
 					<div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
 						<div className='relative flex h-16 items-center justify-between my-2'>
 							{/* PROFILE CARD */}
-							<div className='absolute bg-white drop-shadow-md inset-y-0 left-0 flex items-center justify-between xl:justify-start pr-2 w-96 min-w-fit px-2 rounded-md md:inset-auto md:ml-6 md:pr-0'>
+							<div className='absolute bg-white drop-shadow-md inset-y-0 left-0 flex items-center justify-between xl:justify-start w-80 min-w-fit px-2 rounded-md md:inset-auto md:ml-6 md:pr-0'>
 								<div className='flex-shrink-0 p-2'>
 									{/* Profile Picture */}
 									<div className='flex rounded-full border-2 border-black bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
@@ -32,7 +32,7 @@ export default function Navbar() {
 								</div>
 								{/* Mobile menu button*/}
 								<div className='inset-y-0 right-0 flex items-end xl:hidden w-max mx-2'>
-									<Disclosure.Button className='inline-flex items-center justify-center rounded-md p-1 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+									<Disclosure.Button className='inline-flex items-center justify-center rounded-md p-1 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white  transition ease-in-out duration-200 hover:scale-125'>
 										<span className='sr-only'>Open main menu</span>
 										{open ? <XMarkIcon className='block h-6 w-6' aria-hidden='true' /> : <Bars3Icon className='block h-6 w-6' aria-hidden='true' />}
 									</Disclosure.Button>
@@ -57,7 +57,7 @@ export default function Navbar() {
 							{/* Action */}
 							<div className='absolute hidden inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 xl:block'>
 								<div className='flex-shrink-0'>
-									<button className='bg-violet-800 px-10 py-2 drop-shadow-2xl rounded-lg text-white font-medium hover:text-white hover:animate-pulse transition ease-in-out duration-200 hover:scale-105'>
+									<button className='bg-violet-800 px-10 py-2 drop-shadow-2xl rounded-lg text-white font-medium hover:text-white hover:animate-pulse transition ease-in-out duration-200 hover:scale-110'>
 										Contact Me
 									</button>
 								</div>
