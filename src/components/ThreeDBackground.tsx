@@ -1,6 +1,7 @@
 import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
+import Navbar from "./Navbar";
 
 const Cube = () => {
 	const cube = useRef<Mesh>();
@@ -12,14 +13,14 @@ const Cube = () => {
 		cube.current.rotation.x += 0.005;
 		cube.current.rotation.y += 0.005;
 
-		cube.current.position.x = Math.sin(Date.now() / 1000) * 2.25 + 1;
-		cube.current.position.y = Math.cos(Date.now() / 1000) * 2.25 + 1;
+		cube.current.position.x = Math.sin(Date.now() / 1000) * 2.25 + 0.35;
+		cube.current.position.y = Math.cos(Date.now() / 1000) * 2.25 + 0.35;
 	});
 
 	return (
 		<mesh ref={cube} position={cubePosition}>
 			<boxGeometry args={cubeSize} />
-			<meshStandardMaterial color='#0391BA' />
+			<meshStandardMaterial color="#0391BA" />
 		</mesh>
 	);
 };
@@ -38,7 +39,7 @@ const Sphere = () => {
 	return (
 		<mesh ref={sphere} position={spherePosition}>
 			<sphereGeometry args={sphereSize} />
-			<meshStandardMaterial color='hotpink' />
+			<meshStandardMaterial color="hotpink" />
 		</mesh>
 	);
 };
@@ -47,17 +48,20 @@ const Pyramid = () => {
 	const pyramid = useRef<Mesh>();
 
 	const [pyramidSize, setPyramidSize] = useState<number[]>([1, 1, 4]);
-	const [pyramidPosition, setPyramidPosition] = useState<number[]>([-1.5, -1.5, 0]);
+	const [pyramidPosition, setPyramidPosition] = useState<number[]>([0, 0, -2]);
 
 	useFrame(() => {
 		pyramid.current.rotation.x += 0.005;
 		pyramid.current.rotation.y += 0.005;
+
+		pyramid.current.position.x = Math.cos(Date.now() / 1000) * 2;
+		pyramid.current.position.y = Math.sin(Date.now() / 1000) * 2;
 	});
 
 	return (
 		<mesh ref={pyramid} position={pyramidPosition}>
 			<coneGeometry args={pyramidSize} />
-			<meshStandardMaterial color='orange' />
+			<meshStandardMaterial color="orange" />
 		</mesh>
 	);
 };
@@ -70,6 +74,7 @@ const ThreeDBackground = (props: any) => {
 				width: "100vw",
 			}}
 		>
+			<Navbar />
 			<Canvas
 				camera={{
 					near: 0.1,
