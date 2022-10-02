@@ -1,7 +1,6 @@
 import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
-import Navbar from "./Navbar";
 
 const Cube = () => {
 	const cube = useRef<Mesh>();
