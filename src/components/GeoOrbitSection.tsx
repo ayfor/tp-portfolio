@@ -81,6 +81,7 @@ const GeoOrbitSection = () => {
 			style={{
 				height: "90vh",
 				width: "100vw",
+				maxWidth: "100%",
 			}}
 			className='flex justify-center items-center'
 		>

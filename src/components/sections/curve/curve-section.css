@@ -1,8 +1,0 @@
-.curve-section::before {
-	background: url("/section-curve.svg") center bottom no-repeat;
-	bottom: 100%;
-	content: "";
-	height: 103px;
-	position: absolute;
-	width: 100%;
-}
