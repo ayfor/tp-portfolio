@@ -2,6 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Image from "next/image";
+import Carousel from "./Carousel";
 
 const navigation = [
 	{ name: "Services", href: "#", current: true },
@@ -29,6 +30,7 @@ export default function Navbar() {
 								{/* Name */}
 								<div className='px-3 text-black w-fit'>
 									<h3 className='p-0 text-baseol font-bold'>Joshua Stubbington</h3>
+									<Carousel></Carousel>
 									<span className='p-0 -mt-4'>Software Engineer</span>
 								</div>
 								{/* Mobile menu button*/}
