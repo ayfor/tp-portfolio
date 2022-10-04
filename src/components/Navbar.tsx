@@ -4,8 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 const navigation = [
-	{ name: "About", href: "#", current: true },
+	{ name: "Services", href: "#", current: true },
 	{ name: "My Work", href: "#", current: false },
+	{ name: "About", href: "#", current: true },
 ];
 
 export default function Navbar() {
@@ -32,7 +33,7 @@ export default function Navbar() {
 								</div>
 								{/* Mobile menu button*/}
 								<div className='inset-y-0 right-0 flex items-end xl:hidden w-max mx-2'>
-									<Disclosure.Button className='inline-flex items-center justify-center rounded-lg p-1 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white  transition ease-in-out duration-200 hover:scale-125'>
+									<Disclosure.Button className='inline-flex items-center justify-center rounded-lg p-1 text-gray-400 hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white  transition ease-in-out duration-200 hover:scale-125'>
 										<span className='sr-only'>Open main menu</span>
 										{open ? <XMarkIcon className='block h-6 w-6' aria-hidden='true' /> : <Bars3Icon className='block h-6 w-6' aria-hidden='true' />}
 									</Disclosure.Button>
