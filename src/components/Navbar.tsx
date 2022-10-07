@@ -4,11 +4,21 @@ import { useState } from "react";
 import Image from "next/image";
 import Carousel from "./Carousel";
 
-const navigation = [
+type NavbarItem = {
+	name: string;
+	href: string;
+	current: boolean;
+};
+
+type NavbarItems = NavbarItem[];
+
+const navigation: NavbarItems = [
 	{ name: "Services", href: "#", current: true },
 	{ name: "My Work", href: "#", current: false },
 	{ name: "About", href: "#", current: true },
 ];
+
+const titles: string[] = ["Software Engineer", "Full Stack Developer", "UI Designer"];
 
 export default function Navbar() {
 	const [open, setOpen] = useState(false);
@@ -30,8 +40,7 @@ export default function Navbar() {
 								{/* Name */}
 								<div className='px-3 text-black w-fit'>
 									<h3 className='p-0 text-baseol font-bold'>Joshua Stubbington</h3>
-									<Carousel></Carousel>
-									<span className='p-0 -mt-4'>Software Engineer</span>
+									<Carousel items={titles} />
 								</div>
 								{/* Mobile menu button*/}
 								<div className='inset-y-0 right-0 flex items-end xl:hidden w-max mx-2'>
