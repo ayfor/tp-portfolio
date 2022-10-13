@@ -1,5 +1,5 @@
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Image from "next/image";
 import Carousel from "./Carousel";
@@ -38,30 +38,13 @@ export default function Navbar() {
 							</div>
 							{/* Name */}
 							<div className='px-3 text-black w-fit'>
-								<h3 className='p-0 text-baseol font-bold'>Joshua Stubbington</h3>
+								<h3 className='p-0 text-baseol font-display text-lg'>JOSHUA STUBBINGTON</h3>
 								<Carousel items={titles} />
 							</div>
 							{/* Mobile menu button*/}
 							<div className='inset-y-0 right-0 flex items-end xl:hidden w-max mx-2'>
-								<Disclosure.Button className='inline-flex items-center justify-center rounded-lg p-1 text-gray-400 hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white  transition ease-in-out duration-200 hover:scale-125'>
-									<span className='sr-only'>Open main menu</span>
-									{open ? (
-										<svg key='lbcaicon' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-6 h-6'>
-											<path strokeLinecap='round' strokeLinejoin='round' d='M15.75 19.5L8.25 12-7.5-7.5' />
-										</svg>
-									) : (
-										<svg
-											key='dbcaicon'
-											xmlns='http://www.w3.org/2000/svg'
-											fill='none'
-											viewBox='0 0 24 24'
-											strokeWidth={1.5}
-											stroke='currentColor'
-											className='w-6 h-6 animate-bounce'
-										>
-											<path strokeLinecap='round' strokeLinejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5' />
-										</svg>
-									)}
+								<Disclosure.Button className='inline-flex items-center justify-center rounded-lg p-1 text-gray-800 hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition ease-in-out duration-200 hover:scale-125'>
+									{open ? <XMarkIcon className='block h-6 w-6' aria-hidden='true' /> : <ChevronDownIcon className='block h-6 w-6 animate-bounce' aria-hidden='true' />}
 								</Disclosure.Button>
 							</div>
 						</div>
@@ -97,7 +80,7 @@ export default function Navbar() {
 									key={item.name}
 									as='a'
 									href={item.href}
-									className='block w-100 px-10 py-2 rounded-lg text-center font-medium bg-white drop-shadow-md hover:bg-black hover:text-white transition duration-150 ease-in-out'
+									className='block w-100 sm:w-5/12 px-10 py-2 rounded-lg text-center font-medium bg-white drop-shadow-md hover:bg-black hover:text-white transition duration-150 ease-in-out'
 									aria-current={item.current ? "page" : undefined}
 								>
 									{item.name}

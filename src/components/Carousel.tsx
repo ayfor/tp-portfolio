@@ -12,7 +12,7 @@ const options: AutoplayOptions = {
 	playOnInit: true,
 };
 
-const itemColorClassNames = ["text-violet-500", "text-emerald-500", "text-teal-500"];
+const itemColorClassNames = ["text-purple-accent", "text-teal-accent", "text-violet-accent"];
 
 const Carousel = ({ items }: { items: string[] }) => {
 	const [viewportRef] = useEmblaCarousel({ loop: true }, [Autoplay(options)]);
@@ -21,7 +21,7 @@ const Carousel = ({ items }: { items: string[] }) => {
 		<div className='overflow-hidden' ref={viewportRef}>
 			<div className='flex'>
 				{items.map((item, index) => (
-					<div className='flex-01 font-medium font-subtitle' key={index}>
+					<div className='flex-01 font-medium font-default' key={index}>
 						<div className={itemColorClassNames[index % itemColorClassNames.length]}>{item}</div>
 					</div>
 				))}
