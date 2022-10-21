@@ -1,0 +1,9 @@
+.inline-canvas > div,
+.inline-canvas > div > canvas {
+	display: inline !important;
+}
+
+.inline-canvas > div > canvas {
+	width: 1em !important;
+	height: 1em !important;
+}

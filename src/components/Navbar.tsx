@@ -29,7 +29,7 @@ export default function Navbar() {
 				<div className='mx-auto max-w-full px-2 sm:px-6 lg:px-8'>
 					<div className='relative flex h-16 items-center justify-between my-2'>
 						{/* PROFILE CARD */}
-						<div className='absolute bg-white drop-shadow-xl inset-y-0 left-0 p-1 flex items-center justify-between xl:justify-start w-80 min-w-fit rounded-lg md:inset-auto md:ml-2 md:pr-0'>
+						<div className='absolute bg-white drop-shadow-xl inset-y-0 left-0 p-1 flex items-center justify-between xl:justify-start w-90 min-w-fit rounded-lg md:inset-auto md:ml-2 md:pr-0'>
 							<div className='flex-shrink-0 p-2'>
 								{/* Profile Picture */}
 								<div className='flex border-2 border-transparent rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
@@ -55,21 +55,13 @@ export default function Navbar() {
 									{navigation.map((item) => (
 										<button
 											key={item.name}
-											className='text-black font-medium bg-white drop-shadow-md px-3 py-2 rounded-full w-1/3 hover:bg-black hover:text-white transition duration-150 ease-in-out'
+											className='text-black font-medium bg-white drop-shadow-md px-3 py-2 rounded-lg w-1/3 hover:bg-black hover:text-white transition duration-150 ease-in-out'
 											aria-current={item.current ? "page" : undefined}
 										>
 											{item.name}
 										</button>
 									))}
 								</div>
-							</div>
-						</div>
-						{/* Action */}
-						<div className='absolute hidden inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 xl:block'>
-							<div className='flex-shrink-0'>
-								<button className='bg-violet-800 px-16 py-3 drop-shadow-2xl rounded-full text-white font-medium hover:text-white hover:animate-pulse transition ease-in-out duration-200 hover:scale-110'>
-									Contact Me
-								</button>
 							</div>
 						</div>
 					</div>
