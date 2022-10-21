@@ -79,7 +79,7 @@ const GeoOrbitSection = () => {
 	return (
 		<div
 			style={{
-				height: "90vh",
+				height: "100vh",
 				width: "100vw",
 				maxWidth: "100%",
 			}}

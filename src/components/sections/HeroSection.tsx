@@ -1,27 +1,20 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import PyramidGeo from "../geometry/PyramidGeo";
 
 const HeroSection = () => {
 	return (
 		<section className='absolute w-full h-screen z-40'>
-			<main className='mx-4 mt-32 max-w-7xl px-4 sm:px-6 lg:mt-32 lg:px-8 xl:mt-64'>
-				<div className='sm:text-left'>
+			<main className='w-100 mx-4 mt-32 px-4 sm:px-6 lg:mt-32 lg:px-8 xl:mt-64'>
+				<div className='sm:text-left md:text-center'>
 					<p className='w-100 opacity-60 mb-3 text-base text-gray-400 sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>
 						Web Development, UI/UX Design, Desktop Application Development
 					</p>
-					<h1 className='text-5xl font-bold tracking-tight text-gray-900 md:text-6xl '>
-						<span className='inline'> Delivering</span>
-						<span className='inline tracking-wider text-violet-accent'> GROUNDED</span>
-						<span className='inline'> solutions to </span>
-						<span className='inline tracking-wider text-teal-accent'>
-							<div className='inline-block'>
-								<PyramidGeo />
-								BSTRACT
-							</div>
-						</span>
-						<span className='inline'> problems</span>
+					<h1 className='text-5xl font-bold text-gray-900 md:text-6xl '>
+						Welcome to my <span className='text-indigo-600 font-display'>portfolio.</span>
 					</h1>
-					<div className='mt-5 sm:mt-8 sm:flex sm:justify-start'>
+					<p className='w-100 opacity-60 mb-3 text-base text-black sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>
+						We deliver grounded and practical solutions to abstract problems
+					</p>
+					<div className='mt-5 sm:mt-8 sm:flex sm:justify-center'>
 						<div className='rounded-md shadow'>
 							<a
 								href='#'

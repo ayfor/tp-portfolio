@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 			<Navbar />
 			<HeroSection />
 			<GeoOrbitSection />
-			<CurveContentSection />
+			{/* <CurveContentSection /> */}
 		</>
 	);
 };

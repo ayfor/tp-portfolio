@@ -38,7 +38,7 @@ export default function Navbar() {
 							</div>
 							{/* Name */}
 							<div className='px-3 text-black w-fit'>
-								<h3 className='p-0 text-baseol font-display text-lg'>JOSHUA STUBBINGTON</h3>
+								<h3 className='p-0 text-baseol font-display text-xl'>Joshua Stubbington</h3>
 								<Carousel items={titles} />
 							</div>
 							{/* Mobile menu button*/}
@@ -50,7 +50,7 @@ export default function Navbar() {
 						</div>
 						{/* Menu */}
 						<div className='flex flex-1 items-center justify-center'>
-							<div className='hidden w-4/5 flex-row justify-end items-center sm:ml-6 xl:flex'>
+							<div className='hidden w-full flex-row justify-end items-center sm:mx-6 xl:flex'>
 								<div className='w-1/2 flex justify-between space-x-4'>
 									{navigation.map((item) => (
 										<button
