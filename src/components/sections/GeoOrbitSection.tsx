@@ -51,7 +51,7 @@ const modelProps: GltfModelProps[] = [
 		refAnimationFn: (obj) => {
 			obj.current.rotation.x += 0.001;
 			obj.current.rotation.y += 0.005;
-			obj.current.position.x = Math.sin(Date.now() / 1000) * 2 - 2;
+			obj.current.position.x = Math.sin(Date.now() / 1000) * 4 - 2;
 			obj.current.position.y = Math.cos(Date.now() / 1000) * 2;
 		},
 	},

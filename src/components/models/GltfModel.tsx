@@ -16,9 +16,6 @@ const GltfModel = ({ modelPath, scale = 0.5, position = [0, 0, 0], refAnimationF
 	// Subscribe this component to the render-loop, rotate the mesh every frame
 	useFrame(() => {
 		refAnimationFn(ref);
-		if (modelPath.includes("burger-shape.glb")) {
-			console.log(position);
-		}
 	});
 
 	return (
