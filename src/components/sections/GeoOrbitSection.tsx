@@ -1,7 +1,8 @@
 import { Suspense, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Mesh } from "three";
 import { OrbitControls } from "@react-three/drei";
+import GltfModel from "../models/GltfModel";
 
 const COLOR_MAP = {
 	SPHERE: "#1e2019",
@@ -9,71 +10,52 @@ const COLOR_MAP = {
 	PYRAMID: "#4f46e5",
 };
 
-const Cube = () => {
-	const cube = useRef<Mesh>();
-
-	const [cubeSize, setCubeSize] = useState<number[]>([1.5, 1.5, 1.5]);
-	const [cubePosition, setCubePosition] = useState<number[]>([1, 1, 0]);
-
-	useFrame(() => {
-		cube.current.rotation.x += 0.005;
-		cube.current.rotation.y += 0.005;
-
-		cube.current.position.x = Math.cos(Date.now() / 1000) * 3 - 2;
-		cube.current.position.y = Math.sin(Date.now() / 1000) * 3 + 0.35;
-	});
-
-	return (
-		<mesh ref={cube} position={cubePosition}>
-			<boxGeometry args={cubeSize} />
-			<meshStandardMaterial color={COLOR_MAP.CUBE} />
-		</mesh>
-	);
+type GltfModelProps = {
+	modelPath: string;
+	scale?: number;
+	position?: number[];
+	refAnimationFn?: (ref: any) => void;
 };
 
-const Sphere = () => {
-	const sphere = useRef<Mesh>();
+const modelProps: GltfModelProps[] = [
+	//Cube proxy
+	{
+		modelPath: "/coffee-cup.gltf",
+		scale: 0.075,
+		position: [1, 0, 1],
+		refAnimationFn: (obj) => {
+			obj.current.rotation.x += 0.005;
+			obj.current.rotation.y += 0.005;
+			obj.current.position.x = Math.sin(Date.now() / 1000);
+			obj.current.position.y = Math.cos(Date.now() / 1000);
+		},
+	},
+	//Sphere proxy
+	{
+		modelPath: "/octahedron.glb",
+		scale: 0.1,
+		position: [0, 0, -2],
+		refAnimationFn: (obj) => {
+			obj.current.rotation.x += 0.01;
+			obj.current.rotation.y += 0.01;
 
-	const [sphereSize, setSphereSize] = useState<number[]>([1.4, 90, 90]);
-	const [spherePosition, setSpherePosition] = useState<number[]>([0, 0, -10]);
-
-	useFrame(() => {
-		sphere.current.rotation.x += 0.005;
-		sphere.current.rotation.y += 0.005;
-
-		sphere.current.position.x = Math.sin(Date.now() / 1000) * 8 - 2;
-		sphere.current.position.y = Math.cos(Date.now() / 1000) * 8;
-	});
-
-	return (
-		<mesh ref={sphere} position={spherePosition}>
-			<sphereGeometry args={sphereSize} attach='geometry' />
-			<meshStandardMaterial color={COLOR_MAP.SPHERE} />
-		</mesh>
-	);
-};
-
-const Pyramid = () => {
-	const pyramid = useRef<Mesh>();
-
-	const [pyramidSize, setPyramidSize] = useState<number[]>([1, 1, 4]);
-	const [pyramidPosition, setPyramidPosition] = useState<number[]>([0, 0, -2]);
-
-	useFrame(() => {
-		pyramid.current.rotation.x += 0.005;
-		pyramid.current.rotation.y += 0.005;
-
-		pyramid.current.position.x = Math.sin(Date.now() / 1000) * 6;
-		pyramid.current.position.y = Math.cos(Date.now() / 1000) * 2;
-	});
-
-	return (
-		<mesh ref={pyramid} position={pyramidPosition}>
-			<coneGeometry args={pyramidSize} />
-			<meshStandardMaterial color={COLOR_MAP.PYRAMID} />
-		</mesh>
-	);
-};
+			obj.current.position.x = Math.cos(Date.now() / 1000) * 3 - 2;
+			obj.current.position.y = Math.sin(Date.now() / 1000) * 3 + 0.35;
+		},
+	},
+	//Pyramid proxy
+	{
+		modelPath: "/infinity.glb",
+		scale: 0.1,
+		position: [0, 0, 0],
+		refAnimationFn: (obj) => {
+			obj.current.rotation.x += 0.001;
+			obj.current.rotation.y += 0.005;
+			obj.current.position.x = Math.sin(Date.now() / 1000) * 2 - 2;
+			obj.current.position.y = Math.cos(Date.now() / 1000) * 2;
+		},
+	},
+];
 
 const GeoOrbitSection = () => {
 	return (
@@ -96,9 +78,9 @@ const GeoOrbitSection = () => {
 				{/* <OrbitControls /> */}
 				<Suspense fallback={null}>
 					<pointLight intensity={1} position={[5, 3, 5]} />
-					<Cube />
-					<Sphere />
-					<Pyramid />
+					{modelProps.map((props, index) => (
+						<GltfModel key={index} {...props} />
+					))}
 				</Suspense>
 			</Canvas>
 		</div>
