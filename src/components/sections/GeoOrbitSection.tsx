@@ -6,7 +6,7 @@ import { OrbitControls } from "@react-three/drei";
 const COLOR_MAP = {
 	SPHERE: "#1e2019",
 	CUBE: "#1e2019",
-	PYRAMID: "#1e2019",
+	PYRAMID: "#4f46e5",
 };
 
 const Cube = () => {
@@ -41,8 +41,8 @@ const Sphere = () => {
 		sphere.current.rotation.x += 0.005;
 		sphere.current.rotation.y += 0.005;
 
-		sphere.current.position.x = Math.sin(Date.now() / 1000) * 4 - 2;
-		sphere.current.position.y = Math.cos(Date.now() / 1000) * 4;
+		sphere.current.position.x = Math.sin(Date.now() / 1000) * 8 - 2;
+		sphere.current.position.y = Math.cos(Date.now() / 1000) * 8;
 	});
 
 	return (
