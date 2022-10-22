@@ -20,7 +20,7 @@ type GltfModelProps = {
 const modelProps: GltfModelProps[] = [
 	//Cube proxy
 	{
-		modelPath: "/coffee-cup.gltf",
+		modelPath: "/models/coffee-cup.gltf",
 		scale: 0.075,
 		position: [1, 0, 1],
 		refAnimationFn: (obj) => {
@@ -32,7 +32,7 @@ const modelProps: GltfModelProps[] = [
 	},
 	//Sphere proxy
 	{
-		modelPath: "/octahedron.glb",
+		modelPath: "/models/octahedron.glb",
 		scale: 0.1,
 		position: [0, 0, -2],
 		refAnimationFn: (obj) => {
@@ -45,7 +45,7 @@ const modelProps: GltfModelProps[] = [
 	},
 	//Pyramid proxy
 	{
-		modelPath: "/infinity.glb",
+		modelPath: "/models/infinity.glb",
 		scale: 0.1,
 		position: [0, 0, 0],
 		refAnimationFn: (obj) => {
@@ -65,7 +65,7 @@ const GeoOrbitSection = () => {
 				width: "100vw",
 				maxWidth: "100%",
 			}}
-			className='flex justify-center items-center'
+			className="flex justify-center items-center"
 		>
 			<Canvas
 				camera={{

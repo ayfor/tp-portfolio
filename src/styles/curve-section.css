@@ -1,9 +1,9 @@
 .curve-section::before {
-	background: url("/section-curve-v3.svg") right bottom no-repeat;
+	background: url("/curves/section-curve-v4.svg") right bottom no-repeat;
 	bottom: 100%;
 	right: -2px;
 	content: "";
-	height: 55rem;
+	height: 20rem;
 	position: absolute;
 	width: 100vw;
 }
