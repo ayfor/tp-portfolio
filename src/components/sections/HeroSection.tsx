@@ -14,21 +14,21 @@ const HeroSection = () => {
 					<p className='opacity-80 mb-3 text-base text-black sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>
 						I deliver grounded, practical solutions to abstract problems to meet your needs.
 					</p>
-					<div className='mt-5 sm:mt-8 sm:flex sm:justify-around'>
-						<div className='rounded-md shadow'>
+					<div className='mt-5 sm:mt-8 sm:flex sm:justify-center'>
+						<div className='rounded-md mx-2'>
 							<a
 								href='#'
-								className='flex w-full items-center justify-center rounded-md border border-transparent transition ease-in-out hover:scale-110 bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg'
+								className='flex w-full items-center justify-center rounded-md border-2 border-transparent transition ease-in-out hover:scale-110 bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg'
 							>
 								Contact Me
 								<ArrowRightIcon className='w-6 h-6 ml-4 transition ease-in-out hover:translate-x-2' aria-hidden='true' />
 							</a>
 						</div>
 
-						<div className='rounded-md shadow'>
+						<div className='rounded-md mx-2'>
 							<a
 								href='#'
-								className='flex w-full items-center justify-center rounded-md border-2 border-indigo-600 transition ease-in-out hover:scale-110 bg-transparent px-8 py-3 font-medium text-indigo-600 hover:bg-indigo-700 hover:text-white md:py-4 md:px-10 md:text-lg'
+								className='flex w-full items-center justify-center rounded-md border-2 border-indigo-600 transition ease-in-out hover:scale-105 bg-transparent px-8 py-3 font-semibold text-indigo-600 hover:bg-indigo-700 hover:text-white md:py-4 md:px-10 md:text-lg'
 							>
 								Download Resume
 								<ArrowDownTrayIcon className='w-6 h-6 ml-4 transition ease-in-out hover:animate-bounce' />

@@ -51,11 +51,11 @@ export default function Navbar() {
 						{/* Menu */}
 						<div className='flex flex-1 items-center justify-center'>
 							<div className='hidden w-full flex-row justify-end items-center sm:mx-6 xl:flex'>
-								<div className='w-1/3 flex justify-between space-x-4'>
+								<div className='w-1/4 flex justify-between space-x-4'>
 									{navigation.map((item) => (
 										<button
 											key={item.name}
-											className='text-black font-medium bg-white drop-shadow-md px-3 py-2 rounded-lg w-1/4 hover:bg-black hover:text-white transition duration-150 ease-in-out'
+											className='text-black font-medium bg-white drop-shadow-md px-4 py-2 rounded-lg w-1/4 hover:bg-black hover:text-white transition duration-150 ease-in-out'
 											aria-current={item.current ? "page" : undefined}
 										>
 											{item.name}
