@@ -7,7 +7,7 @@ module.exports = {
 				"01": "0 0 100%",
 			},
 			colors: {
-				primary: "#000000",
+				primary: "#242424",
 				"purple-accent": "rgb(168 85 247)",
 				"teal-accent": "rgb(20 184 166)",
 				"violet-accent": "rgb(139 92 246)",
