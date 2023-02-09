@@ -29,7 +29,7 @@ export default function Navbar() {
 				<div className='mx-auto max-w-full px-2 sm:px-6 lg:px-8'>
 					<div className='relative flex h-16 items-center justify-between my-2'>
 						{/* PROFILE CARD */}
-						<div className='absolute bg-white drop-shadow-xl inset-y-0 left-0 p-1 flex items-center justify-between xl:justify-start w-90 min-w-fit rounded-lg md:inset-auto md:ml-2 md:pr-0'>
+						<div className='absolute bg-gray-50 ring-1 ring-inset ring-gray-900/5 inset-y-0 left-0 p-1 flex items-center justify-between xl:justify-start w-90 min-w-fit rounded-lg md:inset-auto md:ml-2 md:pr-0'>
 							<div className='flex-shrink-0 p-2'>
 								{/* Profile Picture */}
 								<div className='flex border-2 border-transparent rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
@@ -55,7 +55,7 @@ export default function Navbar() {
 									{navigation.map((item) => (
 										<button
 											key={item.name}
-											className='text-primary font-medium bg-white drop-shadow-xl px-4 py-2 rounded-lg w-1/4 hover:bg-primary hover:text-white transition duration-150 ease-in-out'
+											className='text-primary font-medium bg-white ring-1 ring-inset ring-gray-900/5 px-4 py-2 rounded-lg w-1/4 hover:bg-primary hover:text-white transition duration-150 ease-in-out'
 											aria-current={item.current ? "page" : undefined}
 										>
 											{item.name}
