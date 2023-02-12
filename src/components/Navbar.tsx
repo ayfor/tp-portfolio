@@ -1,7 +1,6 @@
 import { useState } from "react";
 import BusinessCard from "./BusinessCard";
 
-
 export default function Navbar() {
 	const [open, setOpen] = useState(false);
 

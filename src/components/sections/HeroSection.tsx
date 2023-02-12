@@ -5,10 +5,8 @@ const HeroSection = () => {
 		<section className='absolute w-full h-screen z-40'>
 			<main className='flex items-center justify-center mx-4 mt-32 px-4 sm:px-6 lg:mt-32 lg:px-8 xl:mt-64'>
 				<div className='sm:text-left md:text-center text-primary'>
-					<p className='opacity-60 mb-3 text-base sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>
-						Full Stack Development, UI/UX Design, 3D Modeling, Desktop Application Development{" "}
-					</p>
-					<h1 className='text-5xl font-bold md:text-6xl font-display'>
+					<p className='opacity-60 mb-3 text-base sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>Full Stack Development | UI/UX Design | 3D Modeling </p>
+					<h1 className='sm:my-12 text-5xl font-bold md:text-6xl font-display'>
 						Engineer <ArrowRightIcon className='inline-block w-10 h-10' /> <span className='text-indigo-600'> Sofware Developer</span>
 					</h1>
 					<p className='opacity-80 mb-3 text-base text-primary sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>
