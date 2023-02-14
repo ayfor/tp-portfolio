@@ -3,6 +3,17 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 import GltfModel from "../models/GltfModel";
 
+interface SkillTagProps {
+	title: String;
+	icon: String; // src path
+}
+
+const WebDevelopmentSkillTags: SkillTagProps[] = [
+	{ title: "React", icon: "/images/react.svg" },
+	{ title: "Next.js", icon: "/images/nextjs.svg" },
+	{ title: "Node.js", icon: "/images/nodejs.svg" },
+];
+
 /** */
 const ServicesSection = () => {
 	const servicesModelAnimation = (obj: any) => {
