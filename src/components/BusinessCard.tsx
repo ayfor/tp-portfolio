@@ -1,6 +1,9 @@
+import { useState } from "react";
+import Image from "next/image";
+
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+
 import Carousel from "./Carousel";
 
 type NavbarItem = {
@@ -20,12 +23,13 @@ const navigation: NavbarItems = [
 const titles: string[] = ["Software Engineer", "Full Stack Developer", "UI Designer"];
 
 const BusinessCard = () => {
+	const [open, setOpen] = useState(false);
 	return (
 		<Disclosure as="div" className="sticky top-0">
 			<div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
 				<div className="relative flex h-16 items-center justify-between my-2">
 					{/* PROFILE CARD */}
-					<div className="absolute bg-white drop-shadow-xl inset-y-0 left-0 p-1 flex items-center justify-between xl:justify-start w-90 min-w-fit rounded-lg md:inset-auto md:ml-2 md:pr-0">
+					<div className="absolute bg-gray-50 ring-1 ring-inset ring-gray-900/5 inset-y-0 left-0 p-1 flex items-center justify-between xl:justify-start w-90 min-w-fit rounded-lg md:inset-auto md:ml-2 md:pr-0">
 						<div className="flex-shrink-0 p-2">
 							{/* Profile Picture */}
 							<div className="flex border-2 border-transparent rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -40,7 +44,7 @@ const BusinessCard = () => {
 						{/* Mobile menu button*/}
 						<div className="inset-y-0 right-0 flex items-end xl:hidden w-max mx-2">
 							<Disclosure.Button className="inline-flex items-center justify-center rounded-lg p-1 text-gray-800 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition ease-in-out duration-200 hover:scale-125">
-								<XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <ChevronDownIcon className="block h-6 w-6 animate-bounce" aria-hidden="true" />
+								{open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <ChevronDownIcon className="block h-6 w-6 animate-bounce" aria-hidden="true" />}
 							</Disclosure.Button>
 						</div>
 					</div>
@@ -49,7 +53,7 @@ const BusinessCard = () => {
 						<div className="hidden w-full flex-row justify-end items-center sm:mx-6 xl:flex">
 							<div className="w-1/4 flex justify-between space-x-4">
 								{navigation.map((item) => (
-									<button key={item.name} className="text-primary font-medium bg-white drop-shadow-xl px-4 py-2 rounded-lg w-1/4 hover:bg-primary hover:text-white transition duration-150 ease-in-out" aria-current={item.current ? "page" : undefined}>
+									<button key={item.name} className="text-primary font-medium bg-white ring-1 ring-inset ring-gray-900/5 px-4 py-2 rounded-lg w-1/4 hover:bg-primary hover:text-white transition duration-150 ease-in-out" aria-current={item.current ? "page" : undefined}>
 										{item.name}
 									</button>
 								))}
