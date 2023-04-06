@@ -2,16 +2,13 @@ import { Canvas } from "@react-three/fiber";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 import GltfModel from "../models/GltfModel";
-
-interface SkillTagProps {
-	title: String;
-	icon: String; // src path
-}
+import SkillTag from "../SkillTag";
+import { SkillTagProps } from "../SkillTag";
 
 const WebDevelopmentSkillTags: SkillTagProps[] = [
-	{ title: "React", icon: "/images/react.svg" },
-	{ title: "Next.js", icon: "/images/nextjs.svg" },
-	{ title: "Node.js", icon: "/images/nodejs.svg" },
+	{ title: "React", icon: "/skill-icons/react.png", colour: "teal" },
+	{ title: "Next.js", icon: "/skill-icons/next-js.png", colour: "gray" },
+	{ title: "Electron", icon: "/skill-icons/electron.png", colour: "blue" },
 ];
 
 /** */
@@ -61,6 +58,12 @@ const ServicesSection = () => {
 								<span className='font-semibold text-white text-3xl'>Web Development</span>
 							</div>
 							<div className='flex flex-col items-center px-10 pb-10 justfy-center '>
+								<div className='flex flex-row'>
+									{WebDevelopmentSkillTags.map(({ title, icon, colour }, index) => (
+										<SkillTag title={title} icon={icon} colour={colour} />
+									))}
+								</div>
+
 								<button className='group flex items-center justify-center w-fit h-12 px-4 text-sm uppercase rounded-full ring-inset ring-4 ring-white text-white'>
 									<span className='pl-6'>Learn More</span>
 									<ArrowRightIcon className='w-6 h-6 ml-2 transition ease-in-out group-hover:translate-x-2' aria-hidden='true' />
