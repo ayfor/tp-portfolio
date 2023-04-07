@@ -14,7 +14,7 @@ const SkillTag = ({ title, icon, colour }: SkillTagProps) => {
 
 	const colourClass = colourMap.get(colour) as string;
 
-	const divClass = `flex flex-row items-center justify-center py-1 px-3 m-2 text-white text-sm ${colourClass} rounded-3xl shadow-lg`;
+	const divClass = `flex flex-row items-center justify-center pl-1 pr-2 py-1 m-1 text-white text-sm ${colourClass} rounded-lg shadow-lg`;
 
 	return (
 		<div className={divClass}>
