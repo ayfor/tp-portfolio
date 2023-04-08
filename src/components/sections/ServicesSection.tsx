@@ -19,7 +19,7 @@ const ThreeDModelingSkillTags: SkillTagProps[] = [
 
 const UIUXDesignSkillTags: SkillTagProps[] = [
 	{ title: "Figma", icon: "/skill-icons/figma.png", colour: "purple" },
-	{ title: "Adobe Illustrator", icon: "/skill-icons/adobe-illustrator.jpg", colour: "orange" },
+	{ title: "Adobe Illustrator", icon: "/skill-icons/adobe-illustrator.png", colour: "orange" },
 	{ title: "Adobe XD", icon: "/skill-icons/adobe-xd.png", colour: "pink" },
 	{ title: "Adobe Photoshop", icon: "/skill-icons/adobe-photoshop.png", colour: "blue" },
 ];
@@ -31,7 +31,7 @@ const ServicesSection = () => {
 	};
 
 	return (
-		<div className='curve-section border-solid border-primary border-2 relative w-full min-h-fit h-screen bg-primary'>
+		<div className='curve-section border-solid border-primary border-2 relative w-full min-h-fit h-full bg-primary'>
 			<div className='flex flex-col items-center h-full p-12'>
 				<h1 className='text-white font-display text-4xl'>Find out what I can do for you...</h1>
 
