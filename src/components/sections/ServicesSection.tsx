@@ -26,8 +26,20 @@ const UIUXDesignSkillTags: SkillTagProps[] = [
 
 /** */
 const ServicesSection = () => {
-	const servicesModelAnimation = (obj: any) => {
-		obj.current.rotation.y = Math.cos(Date.now() / 5000);
+	const uiuxAnimation = (obj: any) => {
+		obj.current.rotation.y += 0.001;
+
+		obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 0.6;
+	};
+
+	const webDevAnimation = (obj: any) => {
+		obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 1;
+	};
+
+	const threeDAnimation = (obj: any) => {
+		obj.current.rotation.y -= 0.001;
+
+		obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 0.35;
 	};
 
 	return (
@@ -51,7 +63,7 @@ const ServicesSection = () => {
 									>
 										<pointLight position={[10, 10, 10]} />
 										<ambientLight intensity={0.25} />
-										<GltfModel key={"uiux-model"} position={[0, -1, 1.25]} modelPath='/models/pencil.glb' refAnimationFn={servicesModelAnimation} />
+										<GltfModel key={"uiux-model"} position={[0, 0, 1.25]} modelPath='/models/pencil.glb' refAnimationFn={uiuxAnimation} />
 									</Canvas>
 								</div>
 								<span className='font-semibold text-white text-3xl'>UI / UX Design</span>
@@ -84,7 +96,7 @@ const ServicesSection = () => {
 									>
 										<pointLight position={[10, 10, 10]} />
 										<ambientLight intensity={0.25} />
-										<GltfModel key={"web-dev-model"} position={[-0.5, -2, 0.75]} modelPath='/models/web-dev.glb' refAnimationFn={servicesModelAnimation} />
+										<GltfModel key={"web-dev-model"} position={[0, 0, -3]} modelPath='/models/web-dev.glb' refAnimationFn={webDevAnimation} />
 									</Canvas>
 								</div>
 								<span className='font-semibold text-white text-3xl'>Web Development</span>
@@ -107,7 +119,7 @@ const ServicesSection = () => {
 						<div className='max-w-md flex flex-col overflow-hidden'>
 							<div className='flex flex-col items-center px-10 pt-10 pb-6'>
 								<div className='m-2 p-5 max-w-xs h-96'>
-									{/* <Canvas
+									<Canvas
 										camera={{
 											near: 0.1,
 											far: 1000,
@@ -117,8 +129,8 @@ const ServicesSection = () => {
 									>
 										<pointLight position={[10, 10, 10]} />
 										<ambientLight intensity={0.25} />
-										<GltfModel key={"web-dev-model"} position={[-0.5, -2, 0.75]} modelPath='/models/web-dev.glb' refAnimationFn={servicesModelAnimation} />
-									</Canvas> */}
+										<GltfModel key={"3d-showcase-model"} position={[0, 0, 2]} modelPath='/models/showcase-temple.glb' refAnimationFn={threeDAnimation} />
+									</Canvas>
 								</div>
 								<span className='font-semibold text-white text-3xl'>3D Modelling</span>
 							</div>
