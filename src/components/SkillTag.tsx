@@ -24,7 +24,7 @@ const SkillTag = ({ title, icon, colour }: SkillTagProps) => {
 
 	const textColor = colour === "white" ? "text-gray-800" : "text-white";
 
-	const divClass = `min-w-fit flex flex-row items-center justify-center pl-1 pr-2 py-1 m-1 ${textColor} text-sm ${colourClass} rounded-lg shadow-lg transition ease-in-out bg-opacity-60 hover:bg-opacity-100`;
+	const divClass = `min-w-fit flex flex-row items-center justify-center pl-1 pr-2 py-1 m-1 ${textColor} text-sm ${colourClass} rounded-lg shadow-lg transition ease-in-out bg-opacity-60 hover:bg-opacity-100 hover:cursor-pointer`;
 
 	return (
 		<div className={divClass}>

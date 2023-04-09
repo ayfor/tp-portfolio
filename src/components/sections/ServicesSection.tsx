@@ -36,11 +36,11 @@ const ServicesSection = () => {
 				<h1 className='text-white font-display text-4xl'>Find out what I can do for you...</h1>
 
 				<div className='w-full flex flex-col items-center justify-center text-gray-700 md:p-20'>
-					<div className='flex flex-wrap items-center justify-center w-full'>
+					<div className='flex flex-wrap align-top justify-center w-full'>
 						{/* Left Card */}
-						<div className='max-w-md z-10 flex flex-col mt-8 overflow-hidden transform'>
+						<div className='max-w-md flex flex-col overflow-hidden'>
 							<div className='flex flex-col items-center px-10 pt-10 pb-6'>
-								<div className='m-2p-5 max-w-xs h-96'>
+								<div className='m-2 p-5 max-w-xs h-96'>
 									<Canvas
 										camera={{
 											near: 0.1,
@@ -51,13 +51,13 @@ const ServicesSection = () => {
 									>
 										<pointLight position={[10, 10, 10]} />
 										<ambientLight intensity={0.25} />
-										<GltfModel key={"web-dev-model"} position={[-0.5, -2, 0.75]} modelPath='/models/web-dev.glb' refAnimationFn={servicesModelAnimation} />
+										<GltfModel key={"uiux-model"} position={[0, -1, 1.25]} modelPath='/models/pencil.glb' refAnimationFn={servicesModelAnimation} />
 									</Canvas>
 								</div>
 								<span className='font-semibold text-white text-3xl'>UI / UX Design</span>
 							</div>
-							<div className='flex flex-col items-center px-10 pb-10 justfy-center '>
-								{/* Web Dev Skill List */}
+							<div className='max-w-md flex flex-col items-center px-10 pb-10 justfy-center '>
+								{/* UIUX Skill List */}
 								<div className='flex justify-center flex-row flex-wrap py-2'>
 									{UIUXDesignSkillTags.map(({ title, icon, colour }, index) => (
 										<SkillTag key={`${index}-uiuxst`} title={title} icon={icon} colour={colour} />
@@ -71,9 +71,9 @@ const ServicesSection = () => {
 							</div>
 						</div>
 						{/* Middle Card */}
-						<div className='max-w-md z-10 flex flex-col mt-8 overflow-hidden transform md:scale-125'>
-							<div className='flex flex-col items-center px-10 pt-10 pb-6'>
-								<div className='m-2p-5 max-w-xs h-96'>
+						<div className='max-w-md flex flex-col overflow-hidden mt-8 scale-110'>
+							<div className='flex flex-col items-center px-10 pt-10 pb-6 '>
+								<div className='m-2 p-5 max-w-xs h-96'>
 									<Canvas
 										camera={{
 											near: 0.1,
@@ -89,7 +89,7 @@ const ServicesSection = () => {
 								</div>
 								<span className='font-semibold text-white text-3xl'>Web Development</span>
 							</div>
-							<div className='flex flex-col items-center px-10 pb-10 justfy-center '>
+							<div className='max-w-md flex flex-col items-center px-10 pb-10 justfy-center '>
 								{/* Web Dev Skill List */}
 								<div className='flex justify-center flex-row flex-wrap py-2'>
 									{WebDevelopmentSkillTags.map(({ title, icon, colour }, index) => (
@@ -104,10 +104,10 @@ const ServicesSection = () => {
 							</div>
 						</div>
 						{/* Right Card */}
-						<div className='max-w-md z-10 flex flex-col mt-8 overflow-hidden transform'>
+						<div className='max-w-md flex flex-col overflow-hidden'>
 							<div className='flex flex-col items-center px-10 pt-10 pb-6'>
-								<div className='m-2p-5 max-w-xs h-96'>
-									<Canvas
+								<div className='m-2 p-5 max-w-xs h-96'>
+									{/* <Canvas
 										camera={{
 											near: 0.1,
 											far: 1000,
@@ -118,7 +118,7 @@ const ServicesSection = () => {
 										<pointLight position={[10, 10, 10]} />
 										<ambientLight intensity={0.25} />
 										<GltfModel key={"web-dev-model"} position={[-0.5, -2, 0.75]} modelPath='/models/web-dev.glb' refAnimationFn={servicesModelAnimation} />
-									</Canvas>
+									</Canvas> */}
 								</div>
 								<span className='font-semibold text-white text-3xl'>3D Modelling</span>
 							</div>
