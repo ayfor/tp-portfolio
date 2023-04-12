@@ -65,7 +65,7 @@ const GeoOrbitSection = () => {
 				width: "100vw",
 				maxWidth: "100%",
 			}}
-			className="flex justify-center items-center"
+			className='flex justify-center items-center'
 		>
 			<Canvas
 				camera={{

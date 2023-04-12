@@ -28,21 +28,21 @@ const UIUXDesignSkillTags: SkillTagProps[] = [
 
 /** */
 const ServicesSection = () => {
-	const uiuxAnimation = (obj: any) => {
-		obj.current.rotation.y += 0.001;
+	// const uiuxAnimation = (obj: any) => {
+	// 	obj.current.rotation.y += 0.001;
 
-		obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 0.6;
-	};
+	// 	obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 0.6;
+	// };
 
-	const webDevAnimation = (obj: any) => {
-		obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 1;
-	};
+	// const webDevAnimation = (obj: any) => {
+	// 	obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 1;
+	// };
 
-	const threeDAnimation = (obj: any) => {
-		obj.current.rotation.y -= 0.001;
+	// const threeDAnimation = (obj: any) => {
+	// 	obj.current.rotation.y -= 0.001;
 
-		obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 0.35;
-	};
+	// 	obj.current.position.y = Math.cos(Date.now() / 1000) * 0.15 - 0.35;
+	// };
 
 	return (
 		<div className='curve-section border-solid border-primary border-2 relative w-full min-h-fit h-full bg-primary'>
@@ -51,7 +51,7 @@ const ServicesSection = () => {
 				<h1 className='text-white font-subtitle '>Find out what I can do for you...</h1>
 
 				<div className='w-full flex flex-col items-center justify-center text-gray-700 md:p-20'>
-					<div className='flex flex-wrap align-top justify-between w-full'>
+					<div className='flex flex-row flex-wrap align-top justify-between md:justify-center items-center w-full'>
 						{/* Left Card */}
 						<div className='max-w-md flex flex-col overflow-hidden mt-6'>
 							<div className='flex flex-col items-center px-10 pt-10 pb-6'>
