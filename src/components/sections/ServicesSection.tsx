@@ -47,7 +47,7 @@ const ServicesSection = () => {
 	return (
 		<div className='curve-section border-solid border-primary border-2 relative w-full min-h-fit h-full bg-primary'>
 			<div className='flex flex-col items-center h-full p-12'>
-				<h1 className='text-white font-display text-5xl my-2'>Services</h1>
+				<h1 className='text-white font-display font-black text-5xl my-2'>Services</h1>
 				<p className='text-center opacity-80 mb-3 text-base text-white sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>
 					I deliver grounded, practical solutions to abstract problems to meet your needs.
 				</p>
