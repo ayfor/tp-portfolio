@@ -5,7 +5,7 @@ const HeroSection = () => {
 		<section className='absolute w-full h-screen z-40'>
 			<main className='flex items-center justify-center mx-4 mt-32 px-4 sm:px-6 lg:mt-32 lg:px-8 xl:mt-64'>
 				<div className='text-center text-primary'>
-					<p className='opacity-60 mb-3 text-base sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>Full Stack Development | UI/UX Design | 3D Modeling </p>
+					<p className='opacity-60 mb-3 text-base sm:mt-5 sm:text-lg md:mb-5 md:text-xl lg:mx-0'>Full Stack Development • UI/UX Design • 3D Modeling </p>
 					<h1 className='my-3 text-6xl font-bold md:text-8xl font-display'>twin spruce</h1>
 					<h2 className='text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-orange-500 via-purple-500 animate-gradient-x'>
 						software studio
