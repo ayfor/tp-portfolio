@@ -70,7 +70,7 @@ const ServicesSection = () => {
 										<GltfModel key={"uiux-model"} position={[0, 0, 1.25]} modelPath='/models/pencil.glb' refAnimationFn={uiuxAnimation} />
 									</Canvas>
 								</div> */}
-								<span className='font-semibold text-white text-3xl'>UI / UX Design</span>
+								<span className='font-display font-medium text-white text-3xl'>UI / UX Design</span>
 							</div>
 							<div className='max-w-md flex flex-col items-center px-10 pb-10 justfy-center '>
 								{/* UIUX Skill List */}
@@ -103,7 +103,7 @@ const ServicesSection = () => {
 										<GltfModel key={"web-dev-model"} position={[0, 0, -3]} modelPath='/models/web-dev.glb' refAnimationFn={webDevAnimation} />
 									</Canvas>
 								</div> */}
-								<span className='font-semibold text-white text-3xl'>Web Development</span>
+								<span className='font-display font-medium text-white text-3xl'>Web Development</span>
 							</div>
 							<div className='max-w-md flex flex-col items-center px-10 pb-10 justfy-center '>
 								{/* Web Dev Skill List */}
@@ -136,7 +136,7 @@ const ServicesSection = () => {
 										<GltfModel key={"3d-showcase-model"} position={[0, 0, 2]} modelPath='/models/showcase-temple.glb' refAnimationFn={threeDAnimation} />
 									</Canvas>
 								</div> */}
-								<span className='font-semibold text-white text-3xl'>3D Modelling</span>
+								<span className='font-display font-medium text-white text-3xl'>3D Modelling</span>
 							</div>
 							<div className='flex flex-col items-center px-10 pb-10 justfy-center '>
 								{/* Web Dev Skill List */}

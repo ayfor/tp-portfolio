@@ -29,7 +29,7 @@ const SkillTag = ({ title, icon, colour }: SkillTagProps) => {
 
 	const textColor = colour === "white" ? "text-gray-800" : "text-white";
 
-	const divClass = `min-w-fit flex flex-row items-center justify-center pl-1 pr-2 py-1 m-1 ${textColor} text-sm ${colourClass} rounded-lg shadow-lg transition-all ease-linear duration-500 bg-opacity-60 hover:bg-opacity-100 hover:cursor-pointer`;
+	const divClass = `min-w-fit flex flex-row items-center justify-center pl-1 pr-2 py-1 m-1 ${textColor} text-sm ${colourClass} rounded-lg shadow-lg transition-all ease-linear duration-300 bg-opacity-60 hover:bg-opacity-100 hover:cursor-pointer`;
 
 	return (
 		<div className={divClass} onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
@@ -37,13 +37,13 @@ const SkillTag = ({ title, icon, colour }: SkillTagProps) => {
 			{title}
 			<Transition
 				show={show}
-				className='ml-1 w-6 h-6 hover:scale-125 hover:cursor-pointer hover:rotate-180 hover:transition-all hover:ease-in-out hover:duration-300'
+				className='ml-1 w-6 h-6 hover:scale-125 hover:cursor-pointer hover:rotate-180 hover:transition-all hover:ease-in-out hover:duration-300 hover:delay-50'
 				enter='transition-all ease-in-out duration-300'
 				enterFrom=' opacity-0 -translate-x-2'
 				enterTo=' opacity-100 translate-x-0'
-				leave='transition-all ease-out duration-100'
+				leave='transition-all linear duration-100 delay-300 rotate-180'
 				leaveFrom=' opacity-100 translate-x-1'
-				leaveTo=' opacity-0 -translate-x-2'
+				leaveTo=' opacity-0 -translate-x-3'
 			>
 				<PlusCircleIcon />
 			</Transition>
